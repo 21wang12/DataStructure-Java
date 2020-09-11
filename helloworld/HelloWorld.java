@@ -2,7 +2,7 @@ package helloworld;
 
 public class HelloWorld {
     /*主函数
-    @Author Wang
+    @Author Wang1
     */
     
     public static void main(String[] args) {
