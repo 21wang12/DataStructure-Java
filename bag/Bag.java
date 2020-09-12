@@ -1,6 +1,11 @@
 package bag;
 
+
 public class Bag<T> implements BagInterface<T> {
+
+    public static void main(final String[] args) {
+        System.out.println("123");
+    }
 
     @Override
     public int getCurrentSize() {
@@ -21,19 +26,19 @@ public class Bag<T> implements BagInterface<T> {
     }
 
     @Override
-    public boolean add(Object newEntry) {
+    public boolean add(final Object newEntry) {
         // TODO Auto-generated method stub
         return false;
     }
 
     @Override
-    public Object remove() {
+    public T remove() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public Object remove(Object anEntry) {
+    public T remove(T anEntry) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -45,7 +50,7 @@ public class Bag<T> implements BagInterface<T> {
     }
 
     @Override
-    public int getFrequncyOf(Object anEntry) {
+    public int getFrequncyOf(final Object anEntry) {
         // TODO Auto-generated method stub
         return 0;
     }
@@ -57,7 +62,7 @@ public class Bag<T> implements BagInterface<T> {
     }
 
     @Override
-    public Object[] toArray() {
+    public T[] toArray() {
         // TODO Auto-generated method stub
         return null;
     }
