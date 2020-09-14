@@ -70,6 +70,15 @@ public class PrimitiveDataType{
         System.out.println("最大值：Character.MAX_VALUE="  
                 + (int) Character.MAX_VALUE);  
 
+
+        /**
+         * 3、字符串字面量可以用如下方式表示
+         */
+        String s1 = "S\u00ED Se\u00F1or";
+        System.out.println("s1:"+s1);
+
+        System.out.println(String.class.toString());
+        
     }
 
 }
