@@ -3,7 +3,7 @@ package helloworld;
 public class HelloWorld {
     
     /**
-     * ע��
+     * 主函数
      * @Author Wang1
     */
     public static void main(String[] args) {
