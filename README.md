@@ -1,5 +1,4 @@
-[TOC]
-
+<!-- TOC -->autoauto- [DataStructure-Java](#datastructure-java)auto- [Tutorial](#tutorial)auto    - [ACMEBicycle](#acmebicycle)auto    - [Variable](#variable)auto    - [Primitive](#primitive)autoauto<!-- /TOC -->
 # DataStructure-Java
 利用Java实现数据结构
 
