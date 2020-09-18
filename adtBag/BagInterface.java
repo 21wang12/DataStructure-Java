@@ -1,4 +1,4 @@
-package bag;
+package adtBag;
 
 /**
  * 描述Bag类的接口

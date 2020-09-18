@@ -1,4 +1,4 @@
-package bag;
+package adtBag;
 
 
 public class Bag<T> implements BagInterface<T> {
