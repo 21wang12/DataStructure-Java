@@ -35,9 +35,18 @@ public class MyArrary{
         int[][] multiArrary01={
             intArrary,
             intArrary01,
-            {11,12,13}
         };
-        System.out.println("multiArrary[1][4]=:"+multiArrary01[1][4]);
+        //多维数组的简化初始化也可以使用字面量
+        int[][] multiArrary02={
+            {1,2,3},
+            {4,5,6,7},
+        };
+        //也可以二者结合使用
+        int[][] multiArrary03={
+            intArrary,
+            {4,5,6,7}
+        };
+        
 
     }
 
