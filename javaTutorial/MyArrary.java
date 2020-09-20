@@ -15,8 +15,8 @@ public class MyArrary{
         System.out.println("intArray[0]=:"+intArrary[0]);
         //一维数组的简化的声明、创建和初始化
         int[] intArrary01 = {
-            10,11,12,
-            13,14
+            1,2,3,
+            4,5,6,7
         };
         System.out.println("intArrary01[0]=:"+intArrary01[0]);
 
