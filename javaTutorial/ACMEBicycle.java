@@ -13,16 +13,11 @@ interface Bicycle {
     void applyBrakes(int decrement);
 }
 
-public class ACMEBicycle implements Bicycle {
+public class ACMEBicycle {
 
     int cadence = 0;
     int speed = 0;
     int gear = 1;
-
-   // The compiler will now require that methods
-   // changeCadence, changeGear, speedUp, and applyBrakes
-   // all be implemented. Compilation will fail if those
-   // methods are missing from this class.
 
     public void changeCadence(int newValue) {
          cadence = newValue;
@@ -44,5 +39,15 @@ public class ACMEBicycle implements Bicycle {
          System.out.println("cadence:" +
              cadence + " speed:" + 
              speed + " gear:" + gear);
+    }
+
+    void printf(Object... obj){
+
+    }
+
+    public static void main(String[] args) {
+        String[] s = {new String("hello"),"fuck","you"};
+        String[] s1 = new String[10];
+        System.out.printf("%s %s %s",s);
     }
 }
