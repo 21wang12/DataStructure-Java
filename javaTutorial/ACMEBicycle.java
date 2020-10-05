@@ -47,7 +47,6 @@ public class ACMEBicycle {
 
     public static void main(String[] args) {
         String[] s = {new String("hello"),"fuck","you"};
-        String[] s1 = new String[10];
-        System.out.printf("%s %s %s",s);
+        System.out.printf("%s %s %s",s[0],s[1],s[2]);
     }
 }

@@ -31,6 +31,7 @@ public class MyArrary{
         multiArrary[0][3] = 3;
         //访问
         System.out.println("multiArrary[0][3]=:"+multiArrary[0][3]);
+        /*
         //多维数组的简化声明、创建和初始化
         int[][] multiArrary01={
             intArrary,
@@ -46,6 +47,7 @@ public class MyArrary{
             intArrary,
             {4,5,6,7}
         };
+        */
     }
 
 }
