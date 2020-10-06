@@ -59,10 +59,15 @@ public class Rectangle {
     public void move(int x, int y) {
         origin.x = x;
         origin.y = y;
+        System.out.println("The area is" +  getArea());
     }
 
     // a method for computing the area of the rectangle
     public int getArea() {
 	    return width * height;  
+    }
+
+    public static void main(String[] args) {
+        System.out.println("The default width is" + new Rectangle().width);
     }
 }

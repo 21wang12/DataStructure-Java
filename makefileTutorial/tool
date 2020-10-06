@@ -1,0 +1,9 @@
+#ifndef TOOL
+#define TOOL
+#include<iostream>
+
+void sayFuck(){
+    std::cout<<"fuck"<<std::endl;
+}
+
+#endif
