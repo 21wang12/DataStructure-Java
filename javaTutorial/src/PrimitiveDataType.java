@@ -1,4 +1,3 @@
-package javaTutorial;
 
 public class PrimitiveDataType{
 

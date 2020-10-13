@@ -1,4 +1,3 @@
-package javaTutorial;
 
 public class MyControlFlow {
     public static void main(String[] args) {

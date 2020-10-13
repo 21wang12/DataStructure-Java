@@ -1,6 +1,7 @@
-package javaTutorial;
 
 public class CreateObjectDemo {
+    int a;
+    
 
     int varInt = setValueFun();
 

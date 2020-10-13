@@ -1,5 +1,3 @@
-package javaTutorial;
-
 public class MyArrary{
     public static void main(String[] args) {
         /**

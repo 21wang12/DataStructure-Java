@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
  *
@@ -28,15 +29,43 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package javaTutorial;
 
+public class Rectangle {
+    public int width = 0;
+    public int height = 0;
+    public Point origin;
 
-public class Point {
-    public int x = 0;
-    public int y = 0;
-    // a constructor!
-    public Point(int a, int b) {
-        x = a;
-        y = b;  
+    // four constructors
+    public Rectangle() {
+	    origin = new Point(0, 0);
+    }
+    public Rectangle(Point p) {
+	    origin = p;
+    }
+    public Rectangle(int w, int h) {
+        origin = new Point(0, 0);
+        width = w;
+        height = h;
+    }
+    public Rectangle(Point p, int w, int h) {
+        origin = p;
+        width = w;
+        height = h; 
+    }
+
+    // a method for moving the rectangle
+    public void move(int x, int y) {
+        origin.x = x;
+        origin.y = y;
+        System.out.println("The area is" +  getArea());
+    }
+
+    // a method for computing the area of the rectangle
+    public int getArea() {
+	    return width * height;  
+    }
+
+    public static void main(String[] args) {
+        System.out.println("The default width is" + new Rectangle().width);
     }
 }
