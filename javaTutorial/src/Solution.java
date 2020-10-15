@@ -1,31 +1,62 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 class Solution {
-    public List<String> commonChars(String[] A) {
-        int[] minfreq = new int[26]; 
-        Arrays.fill(minfreq, Integer.MAX_VALUE);
-        for (String word : A){
-            int[] freq = new int[26];
-            for (int i = 0; i < word.length() ; i++){
-                freq[word.charAt(i) - 'a']++;
+    public Node connect(Node root) {
+        if(root == null){
+            return root;
+        }
+
+        
+        Queue<Node> topQueue = new LinkedList<>();
+        Queue<Node> bottomQueue = new LinkedList<>();
+        root.next = null;
+        topQueue.offer(root);
+        
+        while (! topQueue.isEmpty()){
+            while(!topQueue.isEmpty()){//添加下一层的元素。
+                Node temp = topQueue.poll();
+                if(temp.left != null)
+                    bottomQueue.offer(temp.left);
+                if(temp.right != null)
+                    bottomQueue.offer(temp.right);
             }
-            for (int i = 0 ; i < 26 ; i++){
-                minfreq[i] = Math.min(minfreq[i], freq[i]);
+            Node preNode = bottomQueue.poll();
+            while( preNode != null ){//将bottom中的元素转移至top，并设置每个元素的next指针
+                Node nextNode = bottomQueue.poll();
+                preNode.next = nextNode;
+                topQueue.offer(preNode);
+                preNode = nextNode;
             }
         }
-        List<String> ans = new ArrayList<String>();
-        for (int i = 0 ; i < 26 ; i++) {
-            for (int j = 0; j < minfreq[i] ;j++) {
-                ans.add(Character.toString(i+'a'));
-            }
-        }
-        return ans;
+
+        return root;
     }
+
     public static void main(String[] args) {
-        Solution s = new Solution();
-        String[] A = {"bella","label","roller"};
-        System.out.println("Answer:" + s.commonChars(A)); 
+        Queue<Node> topQueue = new LinkedList<>();
+        
+        System.out.println("topQueue:"+(topQueue.poll()==null));
     }
 }
+
+
+class Node {
+    public int val;
+    public Node left;
+    public Node right;
+    public Node next;
+
+    public Node() {}
+    
+    public Node(int _val) {
+        val = _val;
+    }
+
+    public Node(int _val, Node _left, Node _right, Node _next) {
+        val = _val;
+        left = _left;
+        right = _right;
+        next = _next;
+    }
+};
