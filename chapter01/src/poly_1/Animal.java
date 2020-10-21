@@ -6,6 +6,8 @@ public abstract class Animal {
     Animal(){
         name = "animal";
     }
+
+    
     void eat(){
         System.out.println("Animal eat");
     }
