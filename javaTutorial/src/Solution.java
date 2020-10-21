@@ -1,62 +1,50 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 class Solution {
-    public Node connect(Node root) {
-        if(root == null){
-            return root;
-        }
-
-        
-        Queue<Node> topQueue = new LinkedList<>();
-        Queue<Node> bottomQueue = new LinkedList<>();
-        root.next = null;
-        topQueue.offer(root);
-        
-        while (! topQueue.isEmpty()){
-            while(!topQueue.isEmpty()){//添加下一层的元素。
-                Node temp = topQueue.poll();
-                if(temp.left != null)
-                    bottomQueue.offer(temp.left);
-                if(temp.right != null)
-                    bottomQueue.offer(temp.right);
-            }
-            Node preNode = bottomQueue.poll();
-            while( preNode != null ){//将bottom中的元素转移至top，并设置每个元素的next指针
-                Node nextNode = bottomQueue.poll();
-                preNode.next = nextNode;
-                topQueue.offer(preNode);
-                preNode = nextNode;
+    public boolean backspaceCompare(String S, String T) {
+        Stack<Character> ss = new Stack<>();
+        Stack<Character> st = new Stack<>();
+        for (int i = 0; i < S.length(); i++) {
+            if (S.charAt(i) == '#'){
+                if (!ss.empty()){
+                    ss.pop();
+                }
+            }else {
+                ss.push(S.charAt(i));
             }
         }
 
-        return root;
+        for (int i = 0; i < T.length(); i++) {
+            if (T.charAt(i) == '#'){
+                if (!st.empty()){
+                    st.pop();
+                }
+            }else {
+                st.push(S.charAt(i));
+            }
+        }
+
+        while (st.empty() && ss.empty()){
+            if (st.size() != ss.size()){
+                return false;
+            }
+            if (st.pop() != ss.pop()){
+                return false;
+            }
+        }
+        
+        return true;
     }
 
     public static void main(String[] args) {
-        Queue<Node> topQueue = new LinkedList<>();
-        
-        System.out.println("topQueue:"+(topQueue.poll()==null));
+        Stack<Character> s = new Stack<>();
+        s.pop();
     }
 }
 
-
-class Node {
-    public int val;
-    public Node left;
-    public Node right;
-    public Node next;
-
-    public Node() {}
-    
-    public Node(int _val) {
-        val = _val;
-    }
-
-    public Node(int _val, Node _left, Node _right, Node _next) {
-        val = _val;
-        left = _left;
-        right = _right;
-        next = _next;
-    }
-};
