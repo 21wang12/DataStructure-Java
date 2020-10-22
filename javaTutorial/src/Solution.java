@@ -7,7 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
-
+/**
+ * Commit Message Example:
+ * LeetCode-xxx.xxxx
+ */
 class Solution {
     public List<Integer> partitionLabels(String S) {
         Map<Character,Integer> m = new HashMap<>();
