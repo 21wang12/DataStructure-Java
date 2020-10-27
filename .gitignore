@@ -2,3 +2,5 @@
 *.exe
 /.idea
 /resource/*
+test*
+chapter01/src/test/Test.java
