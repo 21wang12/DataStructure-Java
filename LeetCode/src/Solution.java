@@ -20,18 +20,17 @@ import java.util.Stack;
 class Solution {
     
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<TreeNode> l = new ArrayList<>();
+        List<Integer> l = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode currentNode = root;
         while(currentNode != null || ! stack.empty()){
             if(currentNode != null){
-                l.add(currentNode);
+                l.add(currentNode.val);
                 stack.push(currentNode);
                 currentNode = currentNode.left;
             }else{
                 currentNode = stack.pop().right;
             }
-
         }
         return l;
     }
