@@ -1,5 +1,5 @@
 
-public class Variable {
+public class Variable  {
     //类变量
     static int classVariable = 10 ;
 
