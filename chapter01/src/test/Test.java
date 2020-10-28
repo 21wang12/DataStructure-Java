@@ -11,7 +11,7 @@ public class Test {
         StringBuffer sb= new StringBuffer("hellp");
         Date d = new Date();
         d.getTime();
-        System.out.println(1);;
+        System.out.println(1);
     }
     
 }
