@@ -2,7 +2,6 @@
 *.exe
 /.idea
 /resource/*
-test*
 Test.*
 test.*
-makefileTutorial/test.cpp
+/makefileTutorial/test.cpp
