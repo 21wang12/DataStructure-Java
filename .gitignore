@@ -3,4 +3,5 @@
 /.idea
 /resource/*
 test*
-chapter01/src/test/Test.java
+Test.*
+test.*
