@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 makefileTutorial/test.exe
+=======
+*.class
+*.exe
+/.idea
+/resource/*
+>>>>>>> 60ccb62ba43d154a000acbbcd103253bdb222359
