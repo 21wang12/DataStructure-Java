@@ -7,27 +7,23 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
+/**
+ * 提交说明：
+ * LeetCode-140. 单词拆分 II
+ */
+
 
 class Solution {
-    public List<Integer> partitionLabels(String S) {
-        Map<Character,Integer> m = new HashMap<>();
-        List<Integer> l = new ArrayList<>();
-        for (int i = 0 ; i < S.length() ; i++ ){
-            m.put(S.charAt(i),i);
-        }
-        int tempIndex;
-        int maxIndex = -1;
-        for (int i = 0; i < S.length() ; i++){
-            tempIndex = m.get(S.charAt(i));
-            if (tempIndex > maxIndex){
-                maxIndex = tempIndex;
+    public List<String> wordBreak(String s, List<String> wordDict) {
+        List<String> l = new ArrayList<>();
+        for(int i = s.length()-1; i >= 0; i++){
+            for(int j = 0; j < s.length(); j++){
+                String word = s.substring(i-j, i+1);
+                    if( wordDict.contains(word)){
+                        i -= j;
+                        l.add(word);
+                    }
             }
-            if (i == maxIndex){
-                l.add(i+1);
-            }
-        }
-        for (int i = l.size()-1 ; i >0 ; i--){
-            l.set(i,l.get(i)-l.get(i-1));
         }
         return l;
     }
