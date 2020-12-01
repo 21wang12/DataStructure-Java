@@ -5,26 +5,23 @@ import java.util.*;
  */
 
 class Solution {
-    public int[][] allCellsDistOrder(int R, int C, int r0, int c0) {
-        int count = R*C;
-        int[][] ret = new int[count][2];
-        int k = 0;
-        for(int i = 0; i < R; i++){
-            for(int j = 0; j < C; j++){
-                ret[k][0] = i;
-                ret[k][1] = j;
-                k++;
+    public int[] searchRange(int[] nums, int target) {
+        int i=0,j=nums.length-1;
+        while(i<=j){
+            if(nums[i]==nums[j]&&nums[i]==target){
+                break;
+            }
+            if(nums[i]!=target){
+                i++;
+            }
+            if(nums[j]!=target){
+                j--;
             }
         }
-        Arrays.sort(ret,new Comparator<int[]>(){
-
-			@Override
-			public int compare(int[] o1, int[] o2) {
-				// TODO Auto-generated method stub
-				return Math.abs(o1[0]-r0)+Math.abs(o1[1]-c0)-Math.abs(o2[0]-r0)-Math.abs(o2[1]-c0);
-			}
-            
-        });
-        return ret;
+        if(i<=j){
+            return new int[]{i,j};
+        }
+        return new int[]{-1,-1};
+        
     }
 }
