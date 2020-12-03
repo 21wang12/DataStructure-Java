@@ -9,6 +9,7 @@ makefileTutorial/test.exe
 Test.*
 test.*
 /makefileTutorial/test.cpp
+/JDBC/*
 =======
 >>>>>>> 60ccb62ba43d154a000acbbcd103253bdb222359
 >>>>>>> c58ded6e5b4e9da1eb5f2c2abd08be9650d7f491

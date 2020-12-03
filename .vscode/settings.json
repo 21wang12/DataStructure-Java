@@ -43,5 +43,9 @@
         "typeinfo": "cpp",
         "tool": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "chapter01/lib/mysql-connector-java-8.0.22.jar"
+    ]
 }
